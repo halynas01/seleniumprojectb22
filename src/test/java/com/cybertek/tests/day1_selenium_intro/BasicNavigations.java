@@ -12,6 +12,8 @@ public class BasicNavigations {
         WebDriver driver = new ChromeDriver();
 //        3 - get the page for Tesla.com
         driver.get("https://www.tesla.com");
+//        4 - going back using navigations
+        driver.navigate().back();
 
 
     }
