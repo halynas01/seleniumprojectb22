@@ -5,17 +5,44 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BasicNavigations {
-    public static void main(String[] args){
-//        1 - setup the browser driver
+    public static void main(String[] args) throws InterruptedException {
+//1- setup the browser driver
         WebDriverManager.chromedriver().setup();
-//        2 - create instance of selenium web driver
+
+        //2- create instance of selenium web driver
+        // this line opens a browser
         WebDriver driver = new ChromeDriver();
-//        3 - get the page for Tesla.com
+
+        //3- get the page for Tesla.com
         driver.get("https://www.tesla.com");
-//         going back using navigations
+
+        //putting 3 seconds of wait/ stops the code for 3 sec
+        Thread.sleep(3000);
+
+        //Going back using navigations
         driver.navigate().back();
-//        going forward using navigations
+
+        //putting 3 seconds of wait/ stops the code for 3 sec
+        Thread.sleep(3000);
+
+        //Going forward using navigations
         driver.navigate().forward();
+
+        //putting 3 seconds of wait/ stops the code for 3 sec
+        Thread.sleep(3000);
+
+        //refreshing the page using navigations
+        driver.navigate().refresh();
+
+        //putting 3 seconds of wait/ stops the code for 3 sec
+        Thread.sleep(3000);
+
+        //going to another url using .to() method
+        driver.navigate().to("https://www.google.com");
+
+
+
+
 
 
     }
